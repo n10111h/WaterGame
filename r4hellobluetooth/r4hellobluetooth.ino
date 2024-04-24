@@ -3,12 +3,14 @@
 // 1) Connect your Arduino board to your PC with a USB cable
 // 2) Choose your board on the drop down list
 // 3) Copy this entire sketch into the IDE
-// 4) Edit the bluetooth name string (line 23) to something unique to your team, add something else if you have more than one board
+// 4) Edit the bluetooth name string (line 23) to something unique to your team, 
+//    add something else if you have more than one board (e.g. A, B, etc)
 // 5) Click the "Upload" button (right arrow) on the toolbar
 // 6) Open the Serial Monitor (tools menu) if it is not already open
 // 
 //  Use your MicroBlue App on your phone to connect to your board and send commands.
-//  If you just changed the name (step 4 above) you may need to power cycle your Arduino and restart your app a few times to get the name update to occur
+//  If you just changed the name (step 4 above) you may need to power cycle 
+//  your Arduino and restart your app a few times to get the name update to occur
 //
 /////////////////////////////////////////////////////////////////
 
