@@ -9,6 +9,7 @@
 // 6) Open the Serial Monitor (tools menu) if it is not already open
 // 
 //  Use your MicroBlue App on your phone to connect to your board and send commands.
+//  You should see the message ID and Values in the Serial Monitor
 //  If you just changed the name (step 4 above) you may need to power cycle 
 //  your Arduino and restart your app a few times to get the name update to occur
 //
@@ -124,13 +125,13 @@ void loop() {
     while (central.connected()) { // while the central is still connected to peripheral
       BLEMessage msg = getBLEMessage(); // Try to get the next message
 
-      /************************************************************
+      /************************************************************/
       // TEAM CODE
       // See what message and value was sent if any (msg.id and msg.value) 
       // and control the robot as needed
 
 
-      ************************************************************/
+      /************************************************************/
 
     }
   }
