@@ -19,7 +19,7 @@ BLECharacteristic CustomCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214",
 // TEAM CODE
 
 // Bluetooth name (Max 12 characters)
-const char *name = "19743B"; // Change this to something unique to your team
+const char *name = "19743Paddle"; // Change this to something unique to your team
 
 // Pin values (e.g. const int motor1Forward = 1;)
 const int motorA1 = 9;
