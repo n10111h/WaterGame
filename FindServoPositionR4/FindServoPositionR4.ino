@@ -9,8 +9,6 @@
  * 4) reconnect your servo horn in the middle of the range of travel you want
  * 5) Use the up and down buttons to move the servo to various positions, note the values on the LED display
  *
- * https://snappyxo.io/
- *
  ******************************************************************
 */
 
