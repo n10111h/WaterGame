@@ -201,6 +201,7 @@ void loop() {
           analogWrite(servoPin, position);
           setFrame(position);
           matrix.renderBitmap(frame, 8, 12);
+          Serial.println(position);
         }
       }
       if (msg.id == "bdown") { 
@@ -208,7 +209,8 @@ void loop() {
           if (position > 1) position--;
           analogWrite(servoPin, position);
           setFrame(position);
-          matrix.renderBitmap(frame, 8, 12);
+          matrix.renderBitmap(frame, 8, 12); // write it to the led matrix
+          Serial.println(position); // also write it to the Serial Monitor
         }
       }
     }
