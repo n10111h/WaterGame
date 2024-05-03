@@ -153,7 +153,7 @@ void loop() {
       Serial.print(", R: "); Serial.println(rudder);
     }
     runMotor(propMotor1, propMotor2, forwardPower); // Set prop power
-    analogWrite(rudderServo, rudder); // set rudder Servo Position
+    analogWrite(rudderServo, rudder); // set rudder Servo Position  NOTE: This is NOT the recommended way to control a servo...we were in a hurry
   }
   if (msg.id == "bup") {  // button is called "bup" for Button Up
     if (msg.value == "1") { //if the button is down

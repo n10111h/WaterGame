@@ -180,6 +180,7 @@ void loop() {
         runMotor(motorA1, motorA2, leftMotor);
         runMotor(motorB1, motorB2, rightMotor);
       }
+      // NOTE using analogWrite is NOT the recommended way to control a servo.  See our Software Guide.
       if (msg.id == "bup") { // button is called "bup" for Button Up
         if (msg.value.toInt() == 1) { // if they clicked it
           analogWrite(bucket, bucketUp); // move servos to up positions
