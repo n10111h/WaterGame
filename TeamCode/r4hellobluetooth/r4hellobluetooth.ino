@@ -29,7 +29,12 @@ BLECharacteristic CustomCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214",
 
 // Bluetooth name (Max 12 characters)
 const char *name = "3650"; // Change this to something unique to your team
-
+int IN1 = 2;
+int IN2 = 3;
+int IN3 = 4;
+int IN4 = 5;
+int ENA = 6;
+int ENB = 9;
 // Pin values (e.g. const int motor1Forward = 1;)
 
 
@@ -124,7 +129,15 @@ void loop() {
   
     while (central.connected()) { // while the central is still connected to peripheral
       BLEMessage msg = getBLEMessage(); // Try to get the next message
-
+      if (msg.id == "d1" || msg.id == "d0") {
+        //shadeVel = msg.value
+        stickY = msg.value.substring(msg.value.indexOf(",")+1);
+        int stickYint = stickY.toInt() - 512;
+        shadeVel = stickYint/shadeTurnSpeed;
+      } else if (msg.id == "sl1"){
+        shade.write((msg.value.toInt()*180)/100);
+      }   
+      shade.write(shade.read()+shadeVel);
       /************************************************************/
       // TEAM CODE
       // See what message and value was sent if any (msg.id and msg.value) 
